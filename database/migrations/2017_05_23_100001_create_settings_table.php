@@ -18,12 +18,15 @@ class CreateSettingsTable extends Migration
          */
         Schema::create('settings', function ($table) {
             $table->increments('id');
-            $table->string('skey', 255)->nullable();
-            $table->string('name', 255)->nullable();
+            $table->string('key', 255)->nullable();
+            $table->string('package', 255)->nullable();
+            $table->string('module', 255)->nullable();
+            $table->string('name', 100)->nullable();
             $table->string('value', 255)->nullable();
+            $table->string('file', 500)->nullable();
+            $table->string('control', 255)->default('text')->nullable();
             $table->enum('type', ['System','Default','User'])->nullable();
             $table->string('slug', 200)->nullable();
-            $table->enum('status', ['draft', 'complete', 'verify', 'approve', 'publish', 'unpublish', 'archive'])->default('draft')->nullable();
             $table->integer('user_id')->nullable();
             $table->string('user_type',50)->nullable();
             $table->string('upload_folder', 100)->nullable();
