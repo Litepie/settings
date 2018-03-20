@@ -4,7 +4,7 @@ namespace Litepie\Settings\Repositories\Presenter;
 
 use Litepie\Repository\Presenter\FractalPresenter;
 
-class SettingItemPresenter extends FractalPresenter {
+class SettingPresenter extends FractalPresenter {
 
     /**
      * Prepare data to present
@@ -13,6 +13,6 @@ class SettingItemPresenter extends FractalPresenter {
      */
     public function getTransformer()
     {
-        return new SettingItemTransformer();
+        return new SettingTransformer();
     }
 }

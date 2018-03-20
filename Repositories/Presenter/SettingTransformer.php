@@ -5,7 +5,7 @@ namespace Litepie\Settings\Repositories\Presenter;
 use League\Fractal\TransformerAbstract;
 use Hashids;
 
-class SettingItemTransformer extends TransformerAbstract
+class SettingTransformer extends TransformerAbstract
 {
     public function transform(\Litepie\Settings\Models\Setting $setting)
     {
