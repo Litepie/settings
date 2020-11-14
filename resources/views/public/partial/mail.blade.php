@@ -2,45 +2,45 @@
               ->id('settings-setting-create')
               ->method('POST')
               ->files('true')
-              ->action(guard_url('settings/mail'))!!}
+              ->action(trans_url('settings/mail'))!!}
               <div class='row'>
                 <div class='col-md-12 col-sm-12'>
                       <fieldset>
                         <div class="row">
                           
                          <div class="col-md-12"> 
-                           {!! Form::select('env[MAIL_DRIVER]')
+                           {!! Form::select('setting[user.mail.driver]')
                            -> label(trans('settings::setting.label.mail.driver'))
-                           -> options(__('settings::setting.options.mail.driver'), env('MAIL_DRIVER'))!!}
+                           -> options(__('settings::setting.options.mail.driver'), setting('MAIL_DRIVER'))!!}
                          </div>
                          <div class="col-md-12">
-                             {!! Form::text('env[MAIL_HOST]')
+                             {!! Form::text('setting[user.mail.host]')
                              -> label(trans('settings::setting.label.mail.host'))
-                             -> value(env('MAIL_HOST'))
+                             -> value(setting('MAIL_HOST'))
                              -> placeholder(trans('settings::setting.placeholder.mail.host'))!!}
                          </div>
                          <div class="col-md-12">
-                             {!! Form::text('env[MAIL_PORT]')
+                             {!! Form::text('setting[user.mail.port]')
                              -> label(trans('settings::setting.label.mail.port'))
-                             -> value(env('MAIL_PORT'))
+                             -> value(setting('MAIL_PORT'))
                              -> placeholder(trans('settings::setting.placeholder.mail.port'))!!}
                          </div>
                          <div class="col-md-12">
-                             {!! Form::text('env[MAIL_USERNAME]')
+                             {!! Form::text('setting[user.mail.user]')
                              -> label(trans('settings::setting.label.mail.user'))
-                             -> value(env('MAIL_USERNAME'))
+                             -> value(setting('MAIL_USERNAME'))
                              -> placeholder(trans('settings::setting.placeholder.mail.user'))!!}
                          </div>
                          <div class="col-md-12">
-                             {!! Form::text('env[MAIL_PASSWORD]')
+                             {!! Form::text('setting[user.mail.password]')
                              -> label(trans('settings::setting.label.mail.password'))
-                             -> value(env('MAIL_PASSWORD'))
+                             -> value(setting('MAIL_PASSWORD'))
                              -> placeholder(trans('settings::setting.placeholder.mail.password'))!!}
                          </div>
                          <div class="col-md-12">
-                           {!! Form::select('env[MAIL_ENCRYPTION]')
+                           {!! Form::select('setting[user.mail.encryption]')
                            -> label(trans('settings::setting.label.mail.encryption'))
-                           -> options(__('settings::setting.options.mail.encryption'), env('MAIL_ENCRYPTION'))!!}
+                           -> options(__('settings::setting.options.mail.encryption'), setting('MAIL_ENCRYPTION'))!!}
                          </div>
                         </div>
                       </fieldset>
